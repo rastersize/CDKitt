@@ -1,0 +1,38 @@
+//
+// Prefix header for all source files of the 'CDKitt' target in the 'CDKitt' project
+//
+
+#ifdef __OBJC__
+	#if !__has_feature(objc_arc)
+		#error "This project requires automatic reference counting (ARC)."
+	#endif
+
+	#if !__has_feature(objc_arc_weak)
+		#error "This project requires weak references."
+	#endif
+
+	#if !__has_feature(blocks)
+		#error "This project requires Objective-C blocks"
+	#endif
+
+#pragma mark Generic Imports
+	#import <Availability.h>
+	#import <Foundation/Foundation.h>
+
+
+	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
+		#ifndef __IPHONE_5_0
+			#warning "This project uses features only available in iOS SDK 5.0 and later."
+		#endif
+#pragma mark - iOS Only Imports
+
+	#else
+		#ifndef __MAC_10_7
+			#warning "This project uses features only available in OS X SDK 10.7 and later."
+		#endif
+#pragma mark - OS X Only Imports
+
+	#endif
+#else
+	#error "This project requires Objective-C."
+#endif
