@@ -292,9 +292,10 @@
 			children = (
 				9CA2D444164FEC8A00A79AF4 /* iOS */,
 				9CA2D445164FEC9300A79AF4 /* OS X */,
+				9CF8BBF2163EC93100F34638 /* CDKitt.h */,
+				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
 				9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */,
 				9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */,
-				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
 				9CF8BBEC163EC93100F34638 /* Supporting Files */,
 			);
 			path = CDKitt;
@@ -303,7 +304,6 @@
 		9CF8BBEC163EC93100F34638 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				9CF8BBF2163EC93100F34638 /* CDKitt.h */,
 				9CF8BBED163EC93100F34638 /* CDKitt-Info.plist */,
 				9CF8BBEE163EC93100F34638 /* InfoPlist.strings */,
 				9CF8BBF1163EC93100F34638 /* CDKitt-Prefix.pch */,
