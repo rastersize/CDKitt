@@ -93,7 +93,7 @@
  * See http://developer.apple.com/library/mac/#qa/qa2006/qa1490.html for more info.
  * Also see https://github.com/jverkoey/nimbus for the source of this code snippet.
  */
-#define _CD_FIX_CATEGORY_BUG_QA1490(name)	@interface CD_FIX_CATEGORY_BUG_QA1490_##name @end \
+#define _CD_FIX_CATEGORY_BUG_QA1490(name)	@interface CD_FIX_CATEGORY_BUG_QA1490_##name : NSObject @end \
 @implementation CD_FIX_CATEGORY_BUG_QA1490_##name @end
 #define CD_FIX_CATEGORY_BUG_QA1490(class, category)	_CD_FIX_CATEGORY_BUG_QA1490(class ## category)
 
