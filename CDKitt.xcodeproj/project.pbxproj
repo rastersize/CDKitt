@@ -22,9 +22,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-		9C1DE12A164F1C0900120817 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C1DE129164F1C0900120817 /* Foundation.framework */; };
 		9C696C39164FC05F00D12672 /* CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF8BBF2163EC93100F34638 /* CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9C696C3E164FC0D500D12672 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C696C3C164FC0B000D12672 /* UIKit.framework */; };
+		9C91D2E81656B309002C6E62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E71656B309002C6E62 /* UIKit.framework */; };
+		9C91D2EA1656B30E002C6E62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E91656B30E002C6E62 /* Foundation.framework */; };
 		9CA2D438164FC35700A79AF4 /* CDKittMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D436164FC35700A79AF4 /* CDKittMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA2D448164FECD700A79AF4 /* UIImage+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */; };
 		9CA2D4541650289A00A79AF4 /* CDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D4531650289A00A79AF4 /* CDView.m */; };
@@ -81,7 +81,8 @@
 /* Begin PBXFileReference section */
 		9C1DE128164F1C0900120817 /* libCDKitt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCDKitt.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1DE129164F1C0900120817 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9C696C3C164FC0B000D12672 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9C91D2E71656B309002C6E62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		9C91D2E91656B30E002C6E62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9CA2D423164FC2A500A79AF4 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9CA2D425164FC2A500A79AF4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9CA2D426164FC2A500A79AF4 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -128,8 +129,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C696C3E164FC0D500D12672 /* UIKit.framework in Frameworks */,
-				9C1DE12A164F1C0900120817 /* Foundation.framework in Frameworks */,
+				9C91D2EA1656B30E002C6E62 /* Foundation.framework in Frameworks */,
+				9C91D2E81656B309002C6E62 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +155,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C91D2EB1656B314002C6E62 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9C91D2E71656B309002C6E62 /* UIKit.framework */,
+				9C91D2E91656B30E002C6E62 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		9C91D2EC1656B334002C6E62 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				9CF8BBE5163EC93100F34638 /* Cocoa.framework */,
+				9CF8BBFB163EC93200F34638 /* SenTestingKit.framework */,
+				9C1DE129164F1C0900120817 /* Foundation.framework */,
+				9CF8BBE7163EC93100F34638 /* Other Frameworks */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
 		9CA2D420164FC2A500A79AF4 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -268,11 +289,8 @@
 		9CF8BBE4163EC93100F34638 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9C696C3C164FC0B000D12672 /* UIKit.framework */,
-				9CF8BBE5163EC93100F34638 /* Cocoa.framework */,
-				9CF8BBFB163EC93200F34638 /* SenTestingKit.framework */,
-				9C1DE129164F1C0900120817 /* Foundation.framework */,
-				9CF8BBE7163EC93100F34638 /* Other Frameworks */,
+				9C91D2EC1656B334002C6E62 /* OS X */,
+				9C91D2EB1656B314002C6E62 /* iOS */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
