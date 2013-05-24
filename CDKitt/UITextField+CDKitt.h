@@ -1,4 +1,4 @@
-// UIImage+CDKitt.h
+// UITextField+CDKitt.h
 //
 // Copyright (c) 2012 Aron Cedercrantz
 //
@@ -20,22 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import <CDKitt/CDKittTypes.h>
+#import <UIKit/UIKit.h>
 
+@interface UITextField (CDKitt)
 
-@interface UIImage (CDKittImageDrawing)
-
-#pragma mark - Cached Image Drawing
-/** @name Cached Image Drawing */
-/** Returns a `UIImage` rendered with the drawing code in the block.
- This method does not cache the image object. */
-+ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
-+ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
-
-/** Returns a cached `UIImage` rendered with the drawing code in the block.
- The `UIImage` is cached in an `NSCache` with the identifier provided. */
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
+@property (assign, nonatomic, getter = fg_shouldDrawInnerShadow, setter = fg_setShouldDrawInnerShadow:) BOOL shouldDrawInnerShadow;
 
 @end
-

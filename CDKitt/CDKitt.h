@@ -29,13 +29,14 @@
 #pragma mark Generic
 #import <CDKitt/CDKittMacros.h>
 #import <CDKitt/NSFileManager+CDKitt.h>
+#import <CDKitt/NSCache+CDKitt.h>
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 	#pragma mark - iOS Specific
 	#import <CDKitt/UIImage+CDKitt.h>
-	#import <CDKitt/CDUIView.h>
-
+	#import <CDKitt/UITextField+CDKitt.h>
+	#import <CDKitt/CDModelViewController.h>
 #else
 	#pragma mark - OS X Specific
-
+	#import <CDKitt/NSImage+CDKitt.h>
 #endif

@@ -20,6 +20,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
+#import <CDKitt/CDKittTypes.h>
+
+
+
 @interface NSImage (CDKittImageDrawing)
 
 #pragma mark - Cached Image Drawing
@@ -29,6 +33,6 @@
  * @warning The resulting `NSImage` is cached in an `NSCache` using the
  * provided identifier.
  */
-+ (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size flipped:(BOOL)flipped andDrawingBlock:(void(^)())drawingBlock;
++ (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size flipped:(BOOL)flipped andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
 
 @end

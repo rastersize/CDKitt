@@ -22,15 +22,17 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		9C1C0C73166AB27A00BAEC2D /* UITextField+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */; };
+		9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C237BD4168A5ED800605160 /* CDModelViewController.m */; };
 		9C696C39164FC05F00D12672 /* CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF8BBF2163EC93100F34638 /* CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C91D2E81656B309002C6E62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E71656B309002C6E62 /* UIKit.framework */; };
 		9C91D2EA1656B30E002C6E62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E91656B30E002C6E62 /* Foundation.framework */; };
+		9C91D2EF1656B593002C6E62 /* CDKittTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C91D2ED1656B593002C6E62 /* CDKittTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA2D438164FC35700A79AF4 /* CDKittMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D436164FC35700A79AF4 /* CDKittMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA2D448164FECD700A79AF4 /* UIImage+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */; };
-		9CA2D4541650289A00A79AF4 /* CDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D4531650289A00A79AF4 /* CDView.m */; };
-		9CA2D4771650368A00A79AF4 /* NSImage+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D4751650368A00A79AF4 /* NSImage+CDKitt.h */; };
+		9CA2D4771650368A00A79AF4 /* NSImage+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D4751650368A00A79AF4 /* NSImage+CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA2D4781650368A00A79AF4 /* NSImage+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D4761650368A00A79AF4 /* NSImage+CDKitt.m */; };
-		9CA2D47B1650561100A79AF4 /* NSFileManager+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */; };
+		9CA2D47B1650561100A79AF4 /* NSFileManager+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9CA2D47C1650561100A79AF4 /* NSFileManager+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */; };
 		9CA2D47D1650561100A79AF4 /* NSFileManager+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */; };
 		9CF8BBE6163EC93100F34638 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBE5163EC93100F34638 /* Cocoa.framework */; };
@@ -76,13 +78,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C237C2F168BC19C00605160 /* Copy Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Copy Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9C1C0C71166AB27A00BAEC2D /* UITextField+CDKitt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextField+CDKitt.h"; sourceTree = "<group>"; };
+		9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextField+CDKitt.m"; sourceTree = "<group>"; };
 		9C1DE128164F1C0900120817 /* libCDKitt.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libCDKitt.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C1DE129164F1C0900120817 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		9C237BD3168A5ED800605160 /* CDModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDModelViewController.h; sourceTree = "<group>"; };
+		9C237BD4168A5ED800605160 /* CDModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDModelViewController.m; sourceTree = "<group>"; };
 		9C91D2E71656B309002C6E62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C91D2E91656B30E002C6E62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9C91D2ED1656B593002C6E62 /* CDKittTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKittTypes.h; sourceTree = "<group>"; };
 		9CA2D423164FC2A500A79AF4 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9CA2D425164FC2A500A79AF4 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9CA2D426164FC2A500A79AF4 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -101,8 +118,6 @@
 		9CA2D436164FC35700A79AF4 /* CDKittMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKittMacros.h; sourceTree = "<group>"; };
 		9CA2D446164FECD700A79AF4 /* UIImage+CDKitt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+CDKitt.h"; sourceTree = "<group>"; };
 		9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+CDKitt.m"; sourceTree = "<group>"; };
-		9CA2D4521650289A00A79AF4 /* CDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDView.h; sourceTree = "<group>"; };
-		9CA2D4531650289A00A79AF4 /* CDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDView.m; sourceTree = "<group>"; };
 		9CA2D4751650368A00A79AF4 /* NSImage+CDKitt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSImage+CDKitt.h"; sourceTree = "<group>"; };
 		9CA2D4761650368A00A79AF4 /* NSImage+CDKitt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSImage+CDKitt.m"; sourceTree = "<group>"; };
 		9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+CDKitt.h"; sourceTree = "<group>"; };
@@ -155,6 +170,45 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C237C36168C988F00605160 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				9C76761A168FB9A500AF5B27 /* Categories */,
+				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
+				9C91D2ED1656B593002C6E62 /* CDKittTypes.h */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
+		9C76761A168FB9A500AF5B27 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */,
+				9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9C76761B168FB9B800AF5B27 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9CA2D446164FECD700A79AF4 /* UIImage+CDKitt.h */,
+				9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */,
+				9C1C0C71166AB27A00BAEC2D /* UITextField+CDKitt.h */,
+				9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		9C76761C168FB9BF00AF5B27 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				9C237BD3168A5ED800605160 /* CDModelViewController.h */,
+				9C237BD4168A5ED800605160 /* CDModelViewController.m */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
 		9C91D2EB1656B314002C6E62 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,10 +302,8 @@
 		9CA2D444164FEC8A00A79AF4 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				9CA2D446164FECD700A79AF4 /* UIImage+CDKitt.h */,
-				9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */,
-				9CA2D4521650289A00A79AF4 /* CDView.h */,
-				9CA2D4531650289A00A79AF4 /* CDView.m */,
+				9C76761B168FB9B800AF5B27 /* Categories */,
+				9C76761C168FB9BF00AF5B27 /* Classes */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -308,12 +360,10 @@
 		9CF8BBEB163EC93100F34638 /* CDKitt */ = {
 			isa = PBXGroup;
 			children = (
+				9C237C36168C988F00605160 /* Shared */,
 				9CA2D444164FEC8A00A79AF4 /* iOS */,
 				9CA2D445164FEC9300A79AF4 /* OS X */,
 				9CF8BBF2163EC93100F34638 /* CDKitt.h */,
-				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
-				9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */,
-				9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */,
 				9CF8BBEC163EC93100F34638 /* Supporting Files */,
 			);
 			path = CDKitt;
@@ -359,6 +409,7 @@
 				9CA2D438164FC35700A79AF4 /* CDKittMacros.h in Headers */,
 				9CA2D4771650368A00A79AF4 /* NSImage+CDKitt.h in Headers */,
 				9CA2D47B1650561100A79AF4 /* NSFileManager+CDKitt.h in Headers */,
+				9C91D2EF1656B593002C6E62 /* CDKittTypes.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +441,7 @@
 				9CF8BBDE163EC93100F34638 /* Frameworks */,
 				9CF8BBDF163EC93100F34638 /* Headers */,
 				9CF8BBE0163EC93100F34638 /* Resources */,
+				9C237C2F168BC19C00605160 /* Copy Frameworks */,
 			);
 			buildRules = (
 			);
@@ -426,7 +478,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CD;
-				LastUpgradeCheck = 0450;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Aron Cedercrantz";
 			};
 			buildConfigurationList = 9CF8BBDB163EC93100F34638 /* Build configuration list for PBXProject "CDKitt" */;
@@ -490,8 +542,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CA2D448164FECD700A79AF4 /* UIImage+CDKitt.m in Sources */,
-				9CA2D4541650289A00A79AF4 /* CDView.m in Sources */,
 				9CA2D47D1650561100A79AF4 /* NSFileManager+CDKitt.m in Sources */,
+				9C1C0C73166AB27A00BAEC2D /* UITextField+CDKitt.m in Sources */,
+				9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,12 +613,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDKitt/CDKitt-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = ./;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(CD_KITT_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "Vendor/BlocksKit/BlocksKit/**";
 			};
 			name = Debug;
 		};
@@ -577,12 +635,17 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDKitt/CDKitt-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = ./;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				OTHER_LDFLAGS = "-ObjC";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(CD_KITT_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				USER_HEADER_SEARCH_PATHS = "Vendor/BlocksKit/BlocksKit/**";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -590,6 +653,7 @@
 		9C696C2A164F1CE000D12672 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -597,6 +661,7 @@
 		9C696C2B164F1CE000D12672 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -628,7 +693,6 @@
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_SHADOW = YES;
@@ -663,7 +727,6 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
-				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
 				GCC_WARN_SHADOW = YES;
@@ -687,7 +750,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDKitt/CDKitt-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = ./;
 				INFOPLIST_FILE = "CDKitt/CDKitt-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(PRODUCT_NAME).$(WRAPPER_EXTENSION)/$(PRODUCT_NAME)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(CD_KITT_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = framework;
@@ -705,7 +775,14 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDKitt/CDKitt-Prefix.pch";
 				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				HEADER_SEARCH_PATHS = ./;
 				INFOPLIST_FILE = "CDKitt/CDKitt-Info.plist";
+				INSTALL_PATH = "@rpath";
+				LD_DYLIB_INSTALL_NAME = "@rpath/$(PRODUCT_NAME).$(WRAPPER_EXTENSION)/$(PRODUCT_NAME)";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(CD_KITT_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				WRAPPER_EXTENSION = framework;

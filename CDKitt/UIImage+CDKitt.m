@@ -23,7 +23,6 @@
 #import "UIImage+CDKitt.h"
 
 
-
 // The implementation of the methods in UIImage(CDKittImageDrawing) were
 // originally created by David Keegan (@kgn). The copyright notice below applies
 // to them. The method names have been slightly modified (adding a `cd_` prefix).
@@ -65,7 +64,7 @@ CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 	return cache;
 }
 
-+ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(void(^)())drawingBlock
++ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
 {
 	if (size.width <= 0 || size.height <= 0) {
 		return nil;
@@ -78,12 +77,12 @@ CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 	return image;
 }
 
-+ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(void(^)())drawingBlock
++ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
 {
 	return [self cd_imageForSize:size opaque:NO withDrawingBlock:drawingBlock];
 }
 
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(void(^)())drawingBlock
++ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
 {
 	UIImage *image = [[self cd_drawingCache] objectForKey:identifier];
 	if (image == nil && (image = [self cd_imageForSize:size opaque:opaque withDrawingBlock:drawingBlock])) {
@@ -92,7 +91,7 @@ CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 	return image;
 }
 
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(void(^)())drawingBlock
++ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
 {
 	return [self cd_imageWithIdentifier:identifier opaque:NO forSize:size andDrawingBlock:drawingBlock];
 }
