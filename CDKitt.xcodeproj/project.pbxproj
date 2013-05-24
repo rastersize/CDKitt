@@ -25,6 +25,14 @@
 		9C1C0C73166AB27A00BAEC2D /* UITextField+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */; };
 		9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C237BD4168A5ED800605160 /* CDModelViewController.m */; };
 		9C59C4E917500E4600D368B9 /* CDKittAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C59C4E817500E4600D368B9 /* CDKittAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51917501E2F00D368B9 /* NSFileManager+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51A17501E3700D368B9 /* CDKittMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D436164FC35700A79AF4 /* CDKittMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51B17501E3700D368B9 /* CDKittAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C59C4E817500E4600D368B9 /* CDKittAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51C17501E3700D368B9 /* CDKittTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C91D2ED1656B593002C6E62 /* CDKittTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51D17501E3F00D368B9 /* UIImage+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D446164FECD700A79AF4 /* UIImage+CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51E17501E3F00D368B9 /* UITextField+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C1C0C71166AB27A00BAEC2D /* UITextField+CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C51F17501E4600D368B9 /* CDModelViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C237BD3168A5ED800605160 /* CDModelViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C59C52017501E4F00D368B9 /* CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF8BBF2163EC93100F34638 /* CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C696C39164FC05F00D12672 /* CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF8BBF2163EC93100F34638 /* CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C91D2E81656B309002C6E62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E71656B309002C6E62 /* UIKit.framework */; };
 		9C91D2EA1656B30E002C6E62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E91656B30E002C6E62 /* Foundation.framework */; };
@@ -70,15 +78,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9C1DE126164F1C0900120817 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "include/${PRODUCT_NAME}";
-			dstSubfolderSpec = 16;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		9C237C2F168BC19C00605160 /* Copy Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +405,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		9C59C51817501E1800D368B9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C59C51917501E2F00D368B9 /* NSFileManager+CDKitt.h in Headers */,
+				9C59C51A17501E3700D368B9 /* CDKittMacros.h in Headers */,
+				9C59C51B17501E3700D368B9 /* CDKittAttributes.h in Headers */,
+				9C59C51C17501E3700D368B9 /* CDKittTypes.h in Headers */,
+				9C59C51D17501E3F00D368B9 /* UIImage+CDKitt.h in Headers */,
+				9C59C51E17501E3F00D368B9 /* UITextField+CDKitt.h in Headers */,
+				9C59C51F17501E4600D368B9 /* CDModelViewController.h in Headers */,
+				9C59C52017501E4F00D368B9 /* CDKitt.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9CF8BBDF163EC93100F34638 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -428,7 +442,7 @@
 			buildPhases = (
 				9C1DE124164F1C0900120817 /* Sources */,
 				9C1DE125164F1C0900120817 /* Frameworks */,
-				9C1DE126164F1C0900120817 /* CopyFiles */,
+				9C59C51817501E1800D368B9 /* Headers */,
 			);
 			buildRules = (
 			);
