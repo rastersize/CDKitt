@@ -29,7 +29,7 @@
 #pragma mark Main Bundle Information
 /** @name Bundle Information */
 /// The identifier for the main bundle.
-#define CD_BUNDLE_IDENTIFIER	[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleIdentifier"]
+#define CD_BUNDLE_IDENTIFIER	[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleIdentifierKey]
 /// The creator of the main application.
 /// @warning You must add a value for the key `CDBundleCreatorName` to your
 /// bundle’s plist for this to return anything.
@@ -73,6 +73,17 @@
 #define CD_BOXED(val)		({ typeof(val) _tmp_val = (val); [NSValue valueWithBytes:&(_tmp_val) objCType:@encode(typeof(val))]; })
 
 
+#pragma mark - Class to String
+/** @name Selector to String */
+#if DEBUG
+	#define CDStringFromClass(cls)		NSStringFromClass([cls class])
+	#define CDStringFromInstance(inst)	NSStringFromClass([(inst) class])
+#else
+	#define CDStringFromClass(cls)		@#cls
+	#define CDStringFromInstance(inst)	NSStringFromClass([(inst) class])
+#endif // DEBUG
+
+
 #pragma mark - Selector to String
 /** @name Selector to String */
 #if DEBUG
@@ -80,6 +91,16 @@
 #else
 	#define CDStringFromSelector(sel)	@#sel
 #endif // DEBUG
+
+
+#pragma mark - String from BOOL
+#define CDStringFromBOOL(b)	((b) ? @"YES" : @"NO") 
+
+
+#pragma mark - Running Blocks
+#define CDExecutePossibleBlock(b)					if ((b) != nil) { (b)(); }
+#define CDExecutePossibleBlockOnQueue(q, b)			if ((b) != nil) { dispatch_sync((q), (b)); }
+#define CDExecutePossibleBlockOnQueueAsync(q, b)	if ((b) != nil) { dispatch_async((q), (b)); }
 
 
 #pragma mark - Fix QA1490 Static Library Categories Bug
@@ -140,7 +161,7 @@
 /// Logs the given message as a notice if we are in debug mode.
 #define DLogNotice(...)							DLog(__VA_ARGS__)
 /// Logs the given message as a warning if we are in debug mode.
-#define DLogWarning(...)						_DLog(kCDKittLoggingWarningPrefix, __VA_ARGS__)
+#define DLogWarning(...)							_DLog(kCDKittLoggingWarningPrefix, __VA_ARGS__)
 /// Logs the given message as a error if we are in debug mode.
 #define DLogError(...)							_DLog(kCDKittLoggingErrorPrefix, __VA_ARGS__)
 
@@ -149,18 +170,20 @@
 #define DCLog(condition, ...)					_DCLog((condition), kCDKittLoggingNoticePrefix, __VA_ARGS__)
 /// Logs the given notice if the cupplied condition _condition_ is true and we
 /// are in debug mode.
-#define DCLogNotice(condition, ...)				DLog((condition), __VA_ARGS__)
+#define DCLogNotice(condition, ...)				DCLog((condition), __VA_ARGS__)
 /// Logs the given warning if the cupplied condition _condition_ is true and we
 /// are in debug mode.
-#define DCLogWarning(condition, ...)			_DLog((condition), kCDKittLoggingWarningPrefix, __VA_ARGS__)
+#define DCLogWarning(condition, ...)			_DCLog((condition), kCDKittLoggingWarningPrefix, __VA_ARGS__)
 /// Logs the given error if the cupplied condition _condition_ is true and we
 /// are in debug mode.
-#define DCLogError(condition, ...)				_DLog((condition), kCDKittLoggingErrorPrefix, __VA_ARGS__)
+#define DCLogError(condition, ...)				_DCLog((condition), kCDKittLoggingErrorPrefix, __VA_ARGS__)
 
 /// Just logs the current method’s name.
 #define DLogMethod()							DLog(@"")
 
+#define ACLog(condition, ...)					do { if ((condition)) { ALog(__VA_ARGS__); } } while (0)
+
 /// Only triggers an assert if in debugging mode, otherwise it will just log the
-/// the input to the 
-#define ZAssert(condition, ...)					do { if (!(condition)) { ALog(__VA_ARGS__); }} while(0)
+/// the input to the standard output.
+#define ZAssert(condition, ...)					ACLog(!(condition), __VA_ARGS__);
 
