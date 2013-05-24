@@ -1,6 +1,3 @@
 [submodule "Vendor/xcconfig"]
 	path = Vendor/xcconfig
 	url = https://github.com/jspahrsummers/xcconfigs.git
-[submodule "Vendor/BlocksKit"]
-	path = Vendor/BlocksKit
-	url = https://github.com/pandamonia/BlocksKit.git
