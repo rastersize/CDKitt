@@ -24,6 +24,6 @@
 
 @interface UITextField (CDKitt)
 
-@property (assign, nonatomic, getter = fg_shouldDrawInnerShadow, setter = fg_setShouldDrawInnerShadow:) BOOL shouldDrawInnerShadow;
+@property (assign, nonatomic, getter = cd_shouldDrawInnerShadow, setter = cd_setShouldDrawInnerShadow:) BOOL shouldDrawInnerShadow;
 
 @end

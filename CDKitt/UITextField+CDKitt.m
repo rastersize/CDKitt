@@ -30,13 +30,13 @@ static void *kCDKittUITextFieldInnerShadowLayer;
 
 @implementation UITextField (CDKitt)
 
-- (BOOL)fg_shouldDrawInnerShadow
+- (BOOL)cd_shouldDrawInnerShadow
 {
 	NSNumber *shouldDrawInnerShadowNumber = objc_getAssociatedObject(self, kCDKittUITextFieldShouldDrawInnerShadow);
 	return [shouldDrawInnerShadowNumber boolValue];
 }
 
-- (void)fg_setShouldDrawInnerShadow:(BOOL)shouldDrawInnerShadow
+- (void)cd_setShouldDrawInnerShadow:(BOOL)shouldDrawInnerShadow
 {
 	NSNumber *shouldDrawInnerShadowNumber = [NSNumber numberWithBool:shouldDrawInnerShadow];
 	objc_setAssociatedObject(self, kCDKittUITextFieldShouldDrawInnerShadow, shouldDrawInnerShadowNumber, OBJC_ASSOCIATION_ASSIGN);
