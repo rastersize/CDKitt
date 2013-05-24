@@ -1,6 +1,6 @@
 // CDKitt.h
 //
-// Copyright (c) 2012 Aron Cedercrantz
+// Copyright (c) 2013 Aron Cedercrantz
 //
 // Redistribution and use in source and binary forms, with or without
 // modification, are permitted provided that the following conditions are met:
@@ -27,6 +27,7 @@
 
 
 #pragma mark Generic
+#import <CDKitt/CDKittAttributes.h>
 #import <CDKitt/CDKittMacros.h>
 #import <CDKitt/NSFileManager+CDKitt.h>
 #import <CDKitt/NSCache+CDKitt.h>

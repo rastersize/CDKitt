@@ -3,23 +3,44 @@
 //
 
 #ifdef __OBJC__
+	#pragma mark Check Built-In Compiler Macros
+	#ifndef __has_feature
+		#define __has_feature(x) 0
+		#warning No __has_feature support.
+	#endif
+	#ifndef __has_extension
+		#define __has_extension __has_feature
+	#endif
+	#ifndef __has_attribute
+		#define __has_attribute(x) 0
+		#warning No __has_attribute support.
+	#endif
+	#ifndef __has_extension
+		#define __has_extension(x) 0
+		#warning No __has_extension support.
+	#endif
+
+
+	#pragma mark - Check For Compiler Features
 	#if !__has_feature(objc_arc)
 		#error "This project requires automatic reference counting (ARC)."
 	#endif
-
 	#if !__has_feature(objc_arc_weak)
 		#error "This project requires weak references."
 	#endif
-
 	#if !__has_feature(blocks)
 		#error "This project requires Objective-C blocks"
 	#endif
 
-	#pragma mark Generic Imports
+
+	#pragma mark - Generic Imports
 	#import <Availability.h>
 	#import <Foundation/Foundation.h>
+	#import <CDKitt/CDKittAttributes.h>
 	#import <CDKitt/CDKittMacros.h>
 
+
+	#pragma mark - iOS Specifics
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 		#ifndef __IPHONE_6_0
 			#warning "This project uses features only available in iOS SDK 6.0 and later."
@@ -27,8 +48,10 @@
 		#define CD_TARGET_IS_IOS 1
 		#define CD_TARGET_IS_OS_X 0
 
-		#pragma mark - iOS Only Imports
 		#import <UIKit/UIKit.h>
+
+
+	#pragma mark - OS X Specifics
 	#else
 		#ifndef __MAC_10_8
 			#warning "This project uses features only available in OS X SDK 10.8 and later."
@@ -36,7 +59,6 @@
 		#define CD_TARGET_IS_IOS 0
 		#define CD_TARGET_IS_OS_X 1
 
-		#pragma mark - OS X Only Imports
 		#import <Cocoa/Cocoa.h>
 	#endif
 #else
