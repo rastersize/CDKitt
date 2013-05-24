@@ -61,5 +61,12 @@
  */
 - (void)stopObservingModel;
 
+/**
+ Updates the view when there is a change in the model.
+ 
+ @warning Subclasses must call the super implementation.
+ */
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context CD_REQUIRES_SUPER_ATTRIBUTE;
+
 @end
 
