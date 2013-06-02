@@ -37,7 +37,7 @@
 #pragma mark - Deprecated Attributes
 #if __has_attribute(deprecated) && __has_extension(attribute_deprecated_with_message)
 	#define CD_DEPRECATED_MESSAGE(msg)	__attribute__((deprecated(msg)))
-#else if __has_attribute(deprecated)
+#elif __has_attribute(deprecated)
 	#define CD_DEPRECATED_MESSAGE(msg)	__attribute__((deprecated))
 #else
 	#define CD_DEPRECATED_MESSAGE(msg)
@@ -48,7 +48,7 @@
 #pragma mark - Unavailable Attributes
 #if __has_attribute(unavailable) && __has_extension(attribute_unavailable_with_message)
 	#define CD_UNAVAILABLE_MESSAGE(msg)	__attribute__((unavailable(msg)))
-#else if __has_attribute(unavailable)
+#elif __has_attribute(unavailable)
 	#define CD_UNAVAILABLE_MESSAGE(msg)	__attribute__((unavailable))
 #else
 	#define CD_UNAVAILABLE_MESSAGE(msg)
