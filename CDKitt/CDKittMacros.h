@@ -128,6 +128,23 @@
 /// The logging prefix for a “error” class message.
 #define kCDKittLoggingErrorPrefix		@"*** "
 
+
+// A better assert. NSAssert is too runtime dependant, and assert() doesn't log.
+// http://www.mikeash.com/pyblog/friday-qa-2013-05-03-proper-use-of-asserts.html
+// Implementation taken from https://gist.github.com/steipete/5664345.
+// Accepts both:
+// - CDAssert(x > 0);
+// - CDAssert(y > 3, @"Bad value for y");
+#if NS_BLOCK_ASSERTIONS
+	#define CDAssert() do {} while(0)
+#else
+	#define CDAssert(expression, ...) \
+		do { if(!(expression)) { \
+		NSLog(@"%@", [NSString stringWithFormat: @"Assertion failure: %s in %s on line %s:%d. %@", #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
+		abort(); }} while(0)
+#endif
+
+
 // Define our own versions of NSLog(...) which will only send its input to the
 // output if we are in debug mode and a assertion logger which will cause an
 // assertion if we are in debug mode and a in non-debug mode it will output the
@@ -142,12 +159,8 @@
 	/// loggin the message to the standard output.
 	#define ALog(...)							[[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] file:[NSString stringWithUTF8String:__FILE__] lineNumber:__LINE__ description:__VA_ARGS__]
 #else // !DEBUG
-	#define _DLog(prefix, ...)					do { } while (0)
+	#define _DLog(prefix, ...)					do { } while(0)
 	#define _DCLog(condition, prefix, ...)		_DLog(prefix, __VA_ARGS__)
-
-	#ifndef NS_BLOCK_ASSERTIONS
-		#define NS_BLOCK_ASSERTIONS
-	#endif // NS_BLOCK_ASSERTIONS
 
 	/// Always logs a given message.
 	///
@@ -181,7 +194,7 @@
 /// Just logs the current method’s name.
 #define DLogMethod()							DLog(@"")
 
-#define ACLog(condition, ...)					do { if ((condition)) { ALog(__VA_ARGS__); } } while (0)
+#define ACLog(condition, ...)					do { if ((condition)) { ALog(__VA_ARGS__); } } while(0)
 
 /// Only triggers an assert if in debugging mode, otherwise it will just log the
 /// the input to the standard output.
