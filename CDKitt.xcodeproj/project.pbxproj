@@ -251,6 +251,15 @@
 			path = "Mac OS X";
 			sourceTree = "<group>";
 		};
+		9C6C9C99175BFDB5002BCFFD /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				9CA2D4751650368A00A79AF4 /* NSImage+CDKitt.h */,
+				9CA2D4761650368A00A79AF4 /* NSImage+CDKitt.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		9C76761A168FB9A500AF5B27 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -322,8 +331,7 @@
 		9CA2D445164FEC9300A79AF4 /* OS X */ = {
 			isa = PBXGroup;
 			children = (
-				9CA2D4751650368A00A79AF4 /* NSImage+CDKitt.h */,
-				9CA2D4761650368A00A79AF4 /* NSImage+CDKitt.m */,
+				9C6C9C99175BFDB5002BCFFD /* Categories */,
 			);
 			name = "OS X";
 			sourceTree = "<group>";

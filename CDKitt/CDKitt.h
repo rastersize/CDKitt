@@ -29,8 +29,9 @@
 #pragma mark Generic
 #import <CDKitt/CDKittAttributes.h>
 #import <CDKitt/CDKittMacros.h>
+#import <CDKitt/CDKittTypes.h>
+
 #import <CDKitt/NSFileManager+CDKitt.h>
-#import <CDKitt/NSCache+CDKitt.h>
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 	#pragma mark - iOS Specific
