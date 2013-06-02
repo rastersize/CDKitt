@@ -35,6 +35,7 @@
 		9C59C52017501E4F00D368B9 /* CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF8BBF2163EC93100F34638 /* CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C59C52217501EC400D368B9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C59C52117501EC400D368B9 /* QuartzCore.framework */; };
 		9C696C39164FC05F00D12672 /* CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CF8BBF2163EC93100F34638 /* CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C6C9C73175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C6C9C71175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h */; };
 		9C91D2E81656B309002C6E62 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E71656B309002C6E62 /* UIKit.framework */; };
 		9C91D2EA1656B30E002C6E62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C91D2E91656B30E002C6E62 /* Foundation.framework */; };
 		9C91D2EF1656B593002C6E62 /* CDKittTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C91D2ED1656B593002C6E62 /* CDKittTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,6 +117,7 @@
 		9C59C4E717500C3400D368B9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9C59C4E817500E4600D368B9 /* CDKittAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKittAttributes.h; sourceTree = "<group>"; };
 		9C59C52117501EC400D368B9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		9C6C9C71175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+CDRequiresSuper.h"; sourceTree = "<group>"; };
 		9C91D2E71656B309002C6E62 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		9C91D2E91656B30E002C6E62 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS6.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		9C91D2ED1656B593002C6E62 /* CDKittTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDKittTypes.h; sourceTree = "<group>"; };
@@ -263,6 +265,7 @@
 			children = (
 				9CA2D446164FECD700A79AF4 /* UIImage+CDKitt.h */,
 				9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */,
+				9C6C9C71175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h */,
 				9C1C0C71166AB27A00BAEC2D /* UITextField+CDKitt.h */,
 				9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */,
 			);
@@ -421,6 +424,7 @@
 				9C59C51E17501E3F00D368B9 /* UITextField+CDKitt.h in Headers */,
 				9C59C51F17501E4600D368B9 /* CDModelViewController.h in Headers */,
 				9C59C52017501E4F00D368B9 /* CDKitt.h in Headers */,
+				9C6C9C73175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
