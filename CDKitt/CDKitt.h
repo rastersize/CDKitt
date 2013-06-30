@@ -36,9 +36,12 @@
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 	#pragma mark - iOS Specific
 	#import <CDKitt/UIImage+CDKitt.h>
-	#import <CDKitt/UITextField+CDKitt.h>
+	#import	<CDKitt/UITextField+CDKitt.h>
+	#import <CDKitt/UIView+CDAutoLayout.h>
+	#import <CDKitt/UIViewController+CDRequiresSuper.h>
 	#import <CDKitt/CDModelViewController.h>
 #else
 	#pragma mark - OS X Specific
 	#import <CDKitt/NSImage+CDKitt.h>
+	#import <CDKitt/NSView+CDAutoLayout.h>
 #endif

@@ -24,6 +24,14 @@
 /* Begin PBXBuildFile section */
 		9C1C0C73166AB27A00BAEC2D /* UITextField+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */; };
 		9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C237BD4168A5ED800605160 /* CDModelViewController.m */; };
+		9C2967DD175D7FAA00B9EB24 /* NSView+CDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DB175D7FAA00B9EB24 /* NSView+CDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C2967DE175D7FAA00B9EB24 /* NSView+CDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967DC175D7FAA00B9EB24 /* NSView+CDAutoLayout.m */; };
+		9C2967E1175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
+		9C2967E2175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
+		9C2967E3175D808D00B9EB24 /* CDAutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */; };
+		9C2967E4175D808D00B9EB24 /* CDAutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */; };
+		9C2967E9175D81C700B9EB24 /* UIView+CDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967E6175D819900B9EB24 /* UIView+CDAutoLayout.m */; };
+		9C2967EA175D81CE00B9EB24 /* UIView+CDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967E5175D819900B9EB24 /* UIView+CDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C59C4E917500E4600D368B9 /* CDKittAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C59C4E817500E4600D368B9 /* CDKittAttributes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C59C51917501E2F00D368B9 /* NSFileManager+CDKitt.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C59C51A17501E3700D368B9 /* CDKittMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA2D436164FC35700A79AF4 /* CDKittMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -99,6 +107,12 @@
 		9C1DE129164F1C0900120817 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9C237BD3168A5ED800605160 /* CDModelViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDModelViewController.h; sourceTree = "<group>"; };
 		9C237BD4168A5ED800605160 /* CDModelViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDModelViewController.m; sourceTree = "<group>"; };
+		9C2967DB175D7FAA00B9EB24 /* NSView+CDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSView+CDAutoLayout.h"; sourceTree = "<group>"; };
+		9C2967DC175D7FAA00B9EB24 /* NSView+CDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSView+CDAutoLayout.m"; sourceTree = "<group>"; };
+		9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CDAutoLayoutHelper.h; sourceTree = "<group>"; };
+		9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CDAutoLayoutHelper.m; sourceTree = "<group>"; };
+		9C2967E5175D819900B9EB24 /* UIView+CDAutoLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CDAutoLayout.h"; sourceTree = "<group>"; };
+		9C2967E6175D819900B9EB24 /* UIView+CDAutoLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CDAutoLayout.m"; sourceTree = "<group>"; };
 		9C59C4D417500C3400D368B9 /* Common.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Common.xcconfig; sourceTree = "<group>"; };
 		9C59C4D617500C3400D368B9 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		9C59C4D717500C3400D368B9 /* Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Profile.xcconfig; sourceTree = "<group>"; };
@@ -181,6 +195,8 @@
 			isa = PBXGroup;
 			children = (
 				9C76761A168FB9A500AF5B27 /* Categories */,
+				9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */,
+				9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */,
 				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
 				9C59C4E817500E4600D368B9 /* CDKittAttributes.h */,
 				9C91D2ED1656B593002C6E62 /* CDKittTypes.h */,
@@ -256,6 +272,8 @@
 			children = (
 				9CA2D4751650368A00A79AF4 /* NSImage+CDKitt.h */,
 				9CA2D4761650368A00A79AF4 /* NSImage+CDKitt.m */,
+				9C2967DB175D7FAA00B9EB24 /* NSView+CDAutoLayout.h */,
+				9C2967DC175D7FAA00B9EB24 /* NSView+CDAutoLayout.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -274,6 +292,8 @@
 			children = (
 				9CA2D446164FECD700A79AF4 /* UIImage+CDKitt.h */,
 				9CA2D447164FECD700A79AF4 /* UIImage+CDKitt.m */,
+				9C2967E5175D819900B9EB24 /* UIView+CDAutoLayout.h */,
+				9C2967E6175D819900B9EB24 /* UIView+CDAutoLayout.m */,
 				9C6C9C71175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h */,
 				9C1C0C71166AB27A00BAEC2D /* UITextField+CDKitt.h */,
 				9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */,
@@ -433,6 +453,8 @@
 				9C59C51F17501E4600D368B9 /* CDModelViewController.h in Headers */,
 				9C59C52017501E4F00D368B9 /* CDKitt.h in Headers */,
 				9C6C9C73175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h in Headers */,
+				9C2967E2175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */,
+				9C2967EA175D81CE00B9EB24 /* UIView+CDAutoLayout.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,8 +466,10 @@
 				9CA2D438164FC35700A79AF4 /* CDKittMacros.h in Headers */,
 				9CA2D4771650368A00A79AF4 /* NSImage+CDKitt.h in Headers */,
 				9CA2D47B1650561100A79AF4 /* NSFileManager+CDKitt.h in Headers */,
+				9C2967DD175D7FAA00B9EB24 /* NSView+CDAutoLayout.h in Headers */,
 				9C91D2EF1656B593002C6E62 /* CDKittTypes.h in Headers */,
 				9C59C4E917500E4600D368B9 /* CDKittAttributes.h in Headers */,
+				9C2967E1175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +605,8 @@
 				9CA2D47D1650561100A79AF4 /* NSFileManager+CDKitt.m in Sources */,
 				9C1C0C73166AB27A00BAEC2D /* UITextField+CDKitt.m in Sources */,
 				9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */,
+				9C2967E4175D808D00B9EB24 /* CDAutoLayoutHelper.m in Sources */,
+				9C2967E9175D81C700B9EB24 /* UIView+CDAutoLayout.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -590,6 +616,8 @@
 			files = (
 				9CA2D4781650368A00A79AF4 /* NSImage+CDKitt.m in Sources */,
 				9CA2D47C1650561100A79AF4 /* NSFileManager+CDKitt.m in Sources */,
+				9C2967DE175D7FAA00B9EB24 /* NSView+CDAutoLayout.m in Sources */,
+				9C2967E3175D808D00B9EB24 /* CDAutoLayoutHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

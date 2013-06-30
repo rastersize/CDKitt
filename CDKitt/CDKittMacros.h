@@ -65,6 +65,12 @@
 #define CDWeakSelf()			CDWeak(self, weakSelf)
 
 
+#pragma mark - Core Foundation Memory Management
+/** @name Core Foundation Memory Management */
+/// Unlike CFRelease CDCFRelease also supports NULL.
+#define CDCFRelease(cf)			do { if ((cf) != NULL) { CFRelease((cf)); } } while(0)
+
+
 #pragma mark - Boxing Values in Objective-C Objects
 /** @name Boxing Values in Objective-C Objects */
 /// Box a value _val_ using `NSValue`.
