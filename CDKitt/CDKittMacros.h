@@ -145,6 +145,15 @@
 #endif
 
 
+// Mimic's C++'s assert_cast in Objective-C.
+// By @schwa (https://gist.github.com/schwa/532188).
+// Usage example:
+// - (MyView *)myView {
+//     return CDAssertCast(MyView, self.view);
+// }
+#define CDAssertCast(CLS_, OBJ_) ({ NSAssert2([(OBJ_) isKindOfClass:[CLS_ class]], @"Object %@ not of class %@", OBJ_, NSStringFromClass([CLS_ class])); (CLS_ *)(OBJ_); })
+
+
 // Define our own versions of NSLog(...) which will only send its input to the
 // output if we are in debug mode and a assertion logger which will cause an
 // assertion if we are in debug mode and a in non-debug mode it will output the
