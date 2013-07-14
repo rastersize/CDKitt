@@ -8,8 +8,8 @@
 
 #import "CDModelViewController.h"
 
-static void *const kCDModelViewControllerKVOContextModelObject;
-static void *const kCDModelViewControllerKVOContextModelKeyPath;
+static void *const CDModelViewControllerKVOContextModelObject;
+static void *const CDModelViewControllerKVOContextModelKeyPath;
 
 
 @interface CDModelViewController (/*Private*/)
@@ -69,12 +69,12 @@ static void *const kCDModelViewControllerKVOContextModelKeyPath;
 		if (self.isObservingModel == NO) {
 			self.observingModel = YES;
 			
-			[self addObserver:self forKeyPath:CDStringFromSelector(observableModel) options:0 context:kCDModelViewControllerKVOContextModelObject];
+			[self addObserver:self forKeyPath:CDStringFromSelector(observableModel) options:0 context:CDModelViewControllerKVOContextModelObject];
 			
 			id model = self.observableModel;
 			NSArray *keyPaths = self.class.observableModelKeyPaths;
 			for (NSString *keyPath in keyPaths) {
-				[model addObserver:self forKeyPath:keyPath options:0 context:kCDModelViewControllerKVOContextModelKeyPath];
+				[model addObserver:self forKeyPath:keyPath options:0 context:CDModelViewControllerKVOContextModelKeyPath];
 			}
 		}
 	});
@@ -86,12 +86,12 @@ static void *const kCDModelViewControllerKVOContextModelKeyPath;
 		if (self.isObservingModel) {
 			self.observingModel = NO;
 			
-			[self removeObserver:self forKeyPath:CDStringFromSelector(observableModel) context:kCDModelViewControllerKVOContextModelObject];
+			[self removeObserver:self forKeyPath:CDStringFromSelector(observableModel) context:CDModelViewControllerKVOContextModelObject];
 			
 			id model = self.observableModel;
 			NSArray *keyPaths = self.class.observableModelKeyPaths;
 			for (NSString *keyPath in keyPaths) {
-				[model removeObserver:self forKeyPath:keyPath context:kCDModelViewControllerKVOContextModelKeyPath];
+				[model removeObserver:self forKeyPath:keyPath context:CDModelViewControllerKVOContextModelKeyPath];
 			}
 		}
 	});
@@ -99,11 +99,11 @@ static void *const kCDModelViewControllerKVOContextModelKeyPath;
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
-	if (context == kCDModelViewControllerKVOContextModelObject) {
+	if (context == CDModelViewControllerKVOContextModelObject) {
 		dispatch_async(dispatch_get_main_queue(), ^{
 			[self updateView];
 		});
-	} else if (context == kCDModelViewControllerKVOContextModelKeyPath) {
+	} else if (context == CDModelViewControllerKVOContextModelKeyPath) {
 		dispatch_async(dispatch_get_main_queue(), ^{
 			[self updateViewForModelKeyPath:keyPath];
 		});
