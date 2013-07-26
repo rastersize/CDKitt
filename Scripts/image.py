@@ -97,13 +97,13 @@ class ImageGroup:
         return args.format_impl % {'prefix':prefix, 'method':munged_name(filename), 'filename':filename}
 
 
-DEFAULT_IMPL_FORMAT = '+ (instancetype)%(prefix)s%(method)s {\
+DEFAULT_IMPL_FORMAT = '+ (instancetype)%(prefix)s%(method)sImage {\
  id image = [[self class] imageNamed:@"%(filename)s"];\
  ZAssert(image, @"Image %(filename)s not found");\
  return image;\
  }\n'
 
-DEFAULT_HEADER_FORMAT = '+ (instancetype)%(prefix)s%(method)s;\n'
+DEFAULT_HEADER_FORMAT = '+ (instancetype)%(prefix)s%(method)sImage;\n'
 
 PLATFORM_IMAGE_CLASS_OS_X = 'NSImage'
 PLATFORM_IMAGE_CLASS_IOS = 'UIImage'
