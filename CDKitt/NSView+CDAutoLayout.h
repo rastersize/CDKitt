@@ -13,6 +13,9 @@
 /**
  * Add the given view to this view as a subview and autoresizes it to fill the
  * receiving view.
+ *
+ * @param subview The view which should be added as a subview of the reciever.
+ * May be `nil`.
  */
 - (void)cd_addFillingAutoresizedSubview:(NSView *)subview;
 
