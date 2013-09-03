@@ -142,11 +142,13 @@
 // - CDAssert(x > 0);
 // - CDAssert(y > 3, @"Bad value for y");
 #if NS_BLOCK_ASSERTIONS
-	#define CDAssert() do {} while(0)
+	#define CDAssert(expression, ...) \
+		do { if(!(expression)) { \
+		NSLog(@"%@", [NSString stringWithFormat: @"%@Assertion failure: %s in %s on line %s:%d. %@", kCDKittLoggingErrorPrefix, #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); }} while(0)
 #else
 	#define CDAssert(expression, ...) \
 		do { if(!(expression)) { \
-		NSLog(@"%@", [NSString stringWithFormat: @"Assertion failure: %s in %s on line %s:%d. %@", #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
+		NSLog(@"%@", [NSString stringWithFormat: @"%@Assertion failure: %s in %s on line %s:%d. %@", kCDKittLoggingErrorPrefix, #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
 		abort(); }} while(0)
 #endif
 
