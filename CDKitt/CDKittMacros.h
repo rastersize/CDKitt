@@ -160,7 +160,7 @@
 //     return CDAssertCast(MyView, self.view);
 // }
 #define CDAssertCast(theClass, theObject) ({ NSAssert2([(theObject) isKindOfClass:[theClass class]], @"Object %@ not of class %@", theObject, NSStringFromClass([theClass class])); (theClass *)(theObject); })
-
+#define CDCast(theClass, theObject) ({ (theClass *)(theObject); })
 
 // Define our own versions of NSLog(...) which will only send its input to the
 // output if we are in debug mode and a assertion logger which will cause an
