@@ -81,12 +81,12 @@
 
 #pragma mark - Class to String
 /** @name Selector to String */
+#define CDStringFromInstance(inst)		NSStringFromClass([(inst) class])
+#define CDStringFromClassInstance(cls)	NSStringFromClass(cls)
 #if DEBUG
 	#define CDStringFromClass(cls)		NSStringFromClass([cls class])
-	#define CDStringFromInstance(inst)	NSStringFromClass([(inst) class])
 #else
 	#define CDStringFromClass(cls)		@#cls
-	#define CDStringFromInstance(inst)	NSStringFromClass([(inst) class])
 #endif // DEBUG
 
 
