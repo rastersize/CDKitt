@@ -17,7 +17,7 @@ CDKitt is [my](http://aron.cedercrantz.com/) kit of shared Objective-C macros, f
 		3. Add the `CDKitt.framework` product to this group.
 	3. If for an **OS X** target set the runpath search path.
 		1. Under _Build Settings_ search for `rpath`.
-		2. Set _Runpath Search Paths_ to `@loader_path/../Frameworks $(inherited)`.
+		2. Set _Runpath Search Paths_ to `@loader_path/../Frameworks $(inherited)` (i.e. the `LD_RUNPATH_SEARCH_PATHS` setting).
 
 ## License
 The code is licensed under the MIT license, unless otherwise stated. See the _[LICENSE](https://github.com/rastersize/CDKitt/blob/master/LICENSE)_ file in the repository root for the full license text.
