@@ -1,3 +1,7 @@
+<p align="center" >
+	<img src="https://dl.dropboxusercontent.com/u/1337202/linked%20stuff/CDKitt/CDKitt-readme-banner.png" width="850px" height="150px" alt="CDKitt" title="CDKitt">
+</p>
+
 # CDKitt
 CDKitt is [my](http://aron.cedercrantz.com/) kit of shared Objective-C macros, functions and classes. There’s extensions to _Foundation_, _Cocoa Touch_ and regular _Cocoa_.
 
