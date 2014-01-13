@@ -299,10 +299,10 @@
 		9C76761A168FB9A500AF5B27 /* Categories */ = {
 			isa = PBXGroup;
 			children = (
-				9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */,
-				9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */,
 				9CA93E701881F8E5008EBED8 /* NSBundle+CDSystemProperties.h */,
 				9CA93E711881F8E5008EBED8 /* NSBundle+CDSystemProperties.m */,
+				9CA2D4791650561100A79AF4 /* NSFileManager+CDKitt.h */,
+				9CA2D47A1650561100A79AF4 /* NSFileManager+CDKitt.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
