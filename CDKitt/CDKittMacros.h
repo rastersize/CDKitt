@@ -112,48 +112,20 @@
 #define CD_FIX_CATEGORY_BUG_QA1490(class, category)	_CD_FIX_CATEGORY_BUG_QA1490(class ## category)
 
 
-#pragma mark - Debug Output
-/** @name Debug Output */
+#pragma mark - Debug Constants
+/** @name Debug Constants */
 /// The logging prefix for a “notice” class message.
-#define kCDKittLoggingNoticePrefix		@"=== "
+#define CDKittLoggingNoticePrefix		@"=== "
 /// The logging prefix for a “waring” class message.
-#define kCDKittLoggingWarningPrefix		@"+++ "
+#define CDKittLoggingWarningPrefix		@"+++ "
 /// The logging prefix for a “error” class message.
-#define kCDKittLoggingErrorPrefix		@"*** "
+#define CDKittLoggingErrorPrefix		@"*** "
 
 
-// A better assert. NSAssert is too runtime dependant, and assert() doesn't log.
-// http://www.mikeash.com/pyblog/friday-qa-2013-05-03-proper-use-of-asserts.html
-// Implementation taken from https://gist.github.com/steipete/5664345.
-// Accepts both:
-// - CDAssert(x > 0);
-// - CDAssert(y > 3, @"Bad value for y");
-#if NS_BLOCK_ASSERTIONS
-	#define CDAssert(expression, ...) \
-		do { if(!(expression)) { \
-		NSLog(@"%@", [NSString stringWithFormat: @"%@Assertion failure: %s in %s on line %s:%d. %@", kCDKittLoggingErrorPrefix, #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); }} while(0)
-#else
-	#define CDAssert(expression, ...) \
-		do { if(!(expression)) { \
-		NSLog(@"%@", [NSString stringWithFormat: @"%@Assertion failure: %s in %s on line %s:%d. %@", kCDKittLoggingErrorPrefix, #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
-		abort(); }} while(0)
-#endif
-
-
-// Mimic's C++'s assert_cast in Objective-C.
-// By @schwa (https://gist.github.com/schwa/532188).
-// Usage example:
-// - (MyView *)myView {
-//     return CDAssertCast(MyView, self.view);
-// }
-#define CDAssertCast(theClass, theObject) ({ NSAssert2([(theObject) isKindOfClass:[theClass class]], @"Object %@ not of class %@", theObject, NSStringFromClass([theClass class])); (theClass *)(theObject); })
-#define CDCast(theClass, theObject) ({ (theClass *)(theObject); })
-
-// Define our own versions of NSLog(...) which will only send its input to the
-// output if we are in debug mode and a assertion logger which will cause an
-// assertion if we are in debug mode and a in non-debug mode it will output the
-// assertion via NSLog(...).
+#pragma mark Logging Output
+/** @name Logging Output */
 #if DEBUG
+	// Private, don’t use.
 	#define _DLog(prefix, ...)					NSLog(@"%@%s %@", (prefix), __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
 	#define _DCLog(condition, prefix, ...)		do { if ((condition)) { _DLog((prefix), __VA_ARGS__); } } while(0)
 
@@ -163,6 +135,7 @@
 	/// loggin the message to the standard output.
 	#define ALog(...)							[[NSAssertionHandler currentHandler] handleFailureInFunction:[NSString stringWithUTF8String:__PRETTY_FUNCTION__] file:[NSString stringWithUTF8String:__FILE__] lineNumber:__LINE__ description:__VA_ARGS__]
 #else // !DEBUG
+	// Private, don’t use.
 	#define _DLog(prefix, ...)					do { } while(0)
 	#define _DCLog(condition, prefix, ...)		_DLog(prefix, __VA_ARGS__)
 
@@ -170,37 +143,74 @@
 	///
 	/// @warning In debug mode it will trigger an assertion instead of just
 	/// loggin the message to the standard output.
-	#define ALog(...)							NSLog(@"%@%s %@", kCDKittLoggingErrorPrefix, __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
+	#define ALog(...)							NSLog(@"%@%s %@", CDKittLoggingErrorPrefix, __PRETTY_FUNCTION__, [NSString stringWithFormat:__VA_ARGS__])
 #endif // DEBUG
 
 /// Logs the given message if we are in debug mode.
-#define DLog(...)								_DLog(kCDKittLoggingNoticePrefix, __VA_ARGS__)
+#define DLog(...)								_DLog(CDKittLoggingNoticePrefix, __VA_ARGS__)
 /// Logs the given message as a notice if we are in debug mode.
 #define DLogNotice(...)							DLog(__VA_ARGS__)
 /// Logs the given message as a warning if we are in debug mode.
-#define DLogWarning(...)							_DLog(kCDKittLoggingWarningPrefix, __VA_ARGS__)
+#define DLogWarning(...)							_DLog(CDKittLoggingWarningPrefix, __VA_ARGS__)
 /// Logs the given message as a error if we are in debug mode.
-#define DLogError(...)							_DLog(kCDKittLoggingErrorPrefix, __VA_ARGS__)
+#define DLogError(...)							_DLog(CDKittLoggingErrorPrefix, __VA_ARGS__)
+
+/// Just logs the current method’s name.
+#define DLogMethod()							DLog(@"")
 
 /// Logs the given message if the cupplied condition _condition_ is true and we
 /// are in debug mode. The message is logged as a notice.
-#define DCLog(condition, ...)					_DCLog((condition), kCDKittLoggingNoticePrefix, __VA_ARGS__)
+#define DCLog(condition, ...)					_DCLog((condition), CDKittLoggingNoticePrefix, __VA_ARGS__)
 /// Logs the given notice if the cupplied condition _condition_ is true and we
 /// are in debug mode.
 #define DCLogNotice(condition, ...)				DCLog((condition), __VA_ARGS__)
 /// Logs the given warning if the cupplied condition _condition_ is true and we
 /// are in debug mode.
-#define DCLogWarning(condition, ...)			_DCLog((condition), kCDKittLoggingWarningPrefix, __VA_ARGS__)
+#define DCLogWarning(condition, ...)			_DCLog((condition), CDKittLoggingWarningPrefix, __VA_ARGS__)
 /// Logs the given error if the cupplied condition _condition_ is true and we
 /// are in debug mode.
-#define DCLogError(condition, ...)				_DCLog((condition), kCDKittLoggingErrorPrefix, __VA_ARGS__)
+#define DCLogError(condition, ...)				_DCLog((condition), CDKittLoggingErrorPrefix, __VA_ARGS__)
 
-/// Just logs the current method’s name.
-#define DLogMethod()							DLog(@"")
-
+/// Always log the message as long as the condition is met.
 #define ACLog(condition, ...)					do { if ((condition)) { ALog(__VA_ARGS__); } } while(0)
 
-/// Only triggers an assert if in debugging mode, otherwise it will just log the
-/// the input to the standard output.
-#define ZAssert(condition, ...)					ACLog(!(condition), __VA_ARGS__);
 
+#pragma mark - Assertions
+/** @name Assertions */
+/**
+ * A better assert.
+ *
+ * NSAssert is too runtime dependant, and assert() doesn't log.
+ * http://www.mikeash.com/pyblog/friday-qa-2013-05-03-proper-use-of-asserts.html
+ * Implementation taken from https://gist.github.com/steipete/5664345.
+ *
+ * Can either be used with only the evaluation argument or, also with a
+ * description:
+ * - `CDAssert(x > 0);`
+ * - `CDAssert(y > 3, @"Bad value for y, it must be larger than three (3)");`
+ */
+#if NS_BLOCK_ASSERTIONS
+	#define CDAssert(expression, ...) \
+		do { if(!(expression)) { \
+		NSLog(@"%@", [NSString stringWithFormat: @"%@Assertion failure: %s in %s on line %s:%d. %@", CDKittLoggingErrorPrefix, #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); }} while(0)
+#else
+	#define CDAssert(expression, ...) \
+		do { if(!(expression)) { \
+		NSLog(@"%@", [NSString stringWithFormat: @"%@Assertion failure: %s in %s on line %s:%d. %@", CDKittLoggingErrorPrefix, #expression, __PRETTY_FUNCTION__, __FILE__, __LINE__, [NSString stringWithFormat:@"" __VA_ARGS__]]); \
+		abort(); }} while(0)
+#endif
+
+
+/**
+ * Mimic's C++'s assert_cast in Objective-C.
+ *
+ * By @schwa (https://gist.github.com/schwa/532188).
+ *
+ * **Usage example:**
+ *
+ *     - (MyView *)myView {
+ *         return CDAssertCast(MyView, self.view);
+ *     }
+ */
+#define CDAssertCast(theClass, theObject) ({ NSAssert2([(theObject) isKindOfClass:[theClass class]], @"Object %@ not of class %@", theObject, NSStringFromClass([theClass class])); (theClass *)(theObject); })
+#define CDCast(theClass, theObject) ({ (theClass *)(theObject); })
