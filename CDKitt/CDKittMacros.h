@@ -26,24 +26,6 @@
 // POSSIBILITY OF SUCH DAMAGE.
 
 
-#pragma mark Main Bundle Information
-/** @name Bundle Information */
-/// The identifier for the main bundle.
-#define CD_BUNDLE_IDENTIFIER	[[NSBundle mainBundle] objectForInfoDictionaryKey:(NSString *)kCFBundleIdentifierKey]
-/// The creator of the main application.
-/// @warning You must add a value for the key `CDBundleCreatorName` to your
-/// bundle’s plist for this to return anything.
-#define CD_APP_CREATOR			[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CDBundleCreatorName"]
-/// The name of the main application.
-#define CD_APP_NAME				[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleName"]
-/// The version of the main application.
-#define CD_APP_VERSION			[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
-/// The version of the main application.
-#define CD_APP_VERSION_REV		[[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleVersion"]
-/// The copyright statment of the main application.
-#define CD_APP_COPYRIGHT		[[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSHumanReadableCopyright"]
-
-
 #pragma mark - Open URLs and Paths
 /** @name Open URLs and Paths */
 /// Open an URL
