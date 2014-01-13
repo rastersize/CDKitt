@@ -50,6 +50,8 @@
 // LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
+
+
 CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 @implementation UIImage (CDKittImageDrawing)
 
@@ -64,7 +66,7 @@ CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 	return cache;
 }
 
-+ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
++ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(CDImageDrawingBlock)drawingBlock
 {
 	if (size.width <= 0 || size.height <= 0) {
 		return nil;
@@ -77,12 +79,12 @@ CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 	return image;
 }
 
-+ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
++ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(CDImageDrawingBlock)drawingBlock
 {
 	return [self cd_imageForSize:size opaque:NO withDrawingBlock:drawingBlock];
 }
 
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
++ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(CDImageDrawingBlock)drawingBlock
 {
 	UIImage *image = [[self cd_drawingCache] objectForKey:identifier];
 	if (image == nil && (image = [self cd_imageForSize:size opaque:opaque withDrawingBlock:drawingBlock])) {
@@ -91,7 +93,7 @@ CD_FIX_CATEGORY_BUG_QA1490(UIImage, CDKittImageDrawing);
 	return image;
 }
 
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
++ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(CDImageDrawingBlock)drawingBlock
 {
 	return [self cd_imageWithIdentifier:identifier opaque:NO forSize:size andDrawingBlock:drawingBlock];
 }

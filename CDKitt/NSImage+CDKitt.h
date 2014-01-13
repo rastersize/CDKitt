@@ -33,6 +33,6 @@
  * @warning The resulting `NSImage` is cached in an `NSCache` using the
  * provided identifier.
  */
-+ (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size flipped:(BOOL)flipped andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
++ (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size flipped:(BOOL)flipped andDrawingBlock:(CDImageDrawingBlock)drawingBlock;
 
 @end

@@ -52,7 +52,7 @@ CD_FIX_CATEGORY_BUG_QA1490(NSImage, CDKittImageDrawing);
 	return cache;
 }
 
-+ (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(NSSize)size flipped:(BOOL)flipped andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock
++ (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(NSSize)size flipped:(BOOL)flipped andDrawingBlock:(CDImageDrawingBlock)drawingBlock
 {
 	NSImage *image = [[self drawingCache] objectForKey:identifier];
 	if (image == nil){

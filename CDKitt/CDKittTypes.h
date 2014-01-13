@@ -21,6 +21,7 @@
 // THE SOFTWARE.
 
 
-typedef void (^CDKittImageDrawingBlock)(void);
-typedef void (^CDKittDrawingBlock)(CGRect frame);
+typedef void (^CDVoidBlock)(void);
+typedef CDVoidBlock CDImageDrawingBlock;
+typedef void (^CDDrawingBlock)(CGRect frame);
 

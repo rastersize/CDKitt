@@ -29,13 +29,13 @@
 /** @name Cached Image Drawing */
 /** Returns a `UIImage` rendered with the drawing code in the block.
  This method does not cache the image object. */
-+ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
-+ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
++ (UIImage *)cd_imageForSize:(CGSize)size withDrawingBlock:(CDImageDrawingBlock)drawingBlock;
++ (UIImage *)cd_imageForSize:(CGSize)size opaque:(BOOL)opaque withDrawingBlock:(CDImageDrawingBlock)drawingBlock;
 
 /** Returns a cached `UIImage` rendered with the drawing code in the block.
  The `UIImage` is cached in an `NSCache` with the identifier provided. */
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
-+ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(CDKittImageDrawingBlock)drawingBlock;
++ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(CGSize)size andDrawingBlock:(CDImageDrawingBlock)drawingBlock;
++ (UIImage *)cd_imageWithIdentifier:(NSString *)identifier opaque:(BOOL)opaque forSize:(CGSize)size andDrawingBlock:(CDImageDrawingBlock)drawingBlock;
 
 @end
 
