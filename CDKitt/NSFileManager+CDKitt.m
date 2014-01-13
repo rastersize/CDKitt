@@ -103,7 +103,7 @@ CD_FIX_CATEGORY_BUG_QA1490(NSFileManager, CDKitt);
 {
 	NSError *error = nil;
 	NSString *result = [self cd_findOrCreateDirectory:NSApplicationSupportDirectory inDomain:NSUserDomainMask appendPathComponent:applicationName error:&error];
-	ZAssert(result != nil, @"Unable to find or create application support directory:\n%@", error);
+	CDAssert(result != nil, @"Unable to find or create application support directory:\n%@", error);
 	return result;
 }
 
@@ -130,7 +130,7 @@ CD_FIX_CATEGORY_BUG_QA1490(NSFileManager, CDKitt);
 {
 	NSError *error = nil;
 	NSString *result = [self cd_findOrCreateDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appendPathComponent:nil error:&error];
-	ZAssert(result != nil, @"Unable to find or create application documents directory:\n%@", error);
+	CDAssert(result != nil, @"Unable to find or create application documents directory:\n%@", error);
 	return result;
 }
 
@@ -158,7 +158,7 @@ CD_FIX_CATEGORY_BUG_QA1490(NSFileManager, CDKitt);
 	NSError *error = nil;
 	NSString *result = [self cd_findOrCreateDirectory:NSCachesDirectory inDomain:NSUserDomainMask appendPathComponent:bundleIdentifier error:&error];
 	
-	ZAssert(result != nil, @"Unable to find or create application cache directory:\n%@", error);
+	CDAssert(result != nil, @"Unable to find or create application cache directory:\n%@", error);
 	return result;
 }
 
