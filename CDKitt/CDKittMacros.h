@@ -45,6 +45,11 @@
 #define CDWeak(var, weakVar)	__weak typeof((var)) weakVar = (var)
 /// Creates a weak pointer to `self` named `weakSelf`.
 #define CDWeakSelf()			CDWeak(self, weakSelf)
+///
+#define CDStrong(var, strongVar)	__strong strongVar = (var)
+/// Creates a strong pointer to `self` from a weak pointer named `weakSelf`.
+/// You must have used `CDWeakSelf()` before this macro.
+#define CDStrongSelf()			CDStrong(weakSelf, self)
 
 
 #pragma mark - Core Foundation Memory Management
