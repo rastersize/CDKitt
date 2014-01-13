@@ -213,11 +213,11 @@
 				9C76761A168FB9A500AF5B27 /* Categories */,
 				9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */,
 				9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */,
-				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
-				9C59C4E817500E4600D368B9 /* CDKittAttributes.h */,
-				9C91D2ED1656B593002C6E62 /* CDKittTypes.h */,
 				9C628037188443EB00B3904C /* CDDispatchBlock.h */,
 				9C628038188443EB00B3904C /* CDDispatchBlock.m */,
+				9C59C4E817500E4600D368B9 /* CDKittAttributes.h */,
+				9CA2D436164FC35700A79AF4 /* CDKittMacros.h */,
+				9C91D2ED1656B593002C6E62 /* CDKittTypes.h */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
