@@ -722,7 +722,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(CD_KITT_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
@@ -744,7 +744,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_LDFLAGS = (
 					"-ObjC",
-					"-all_load",
+					"$(inherited)",
 				);
 				PRODUCT_NAME = "$(CD_KITT_NAME)";
 				RUN_CLANG_STATIC_ANALYZER = YES;
