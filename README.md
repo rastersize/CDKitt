@@ -8,7 +8,7 @@ CDKitt is [my](http://aron.cedercrantz.com/) kit of shared Objective-C macros, f
 ## Usage
 1. Add CDKitt as a git submodule and bootstrap it.
 	1. `git submodule add https://github.com/rastersize/CDKitt.git External/CDKitt`
-	2. `./External/CDKitt/Scripts/bootstrap`
+	2. `./External/CDKitt/script/bootstrap`
 2. Add the CDKitt Xcode project as a subproject to yours.
 	1. Drag `CDKitt.xcodeproj` from _Finder_ into your project.
 3. Configure your build target.
