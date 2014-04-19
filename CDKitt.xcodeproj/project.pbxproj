@@ -26,8 +26,6 @@
 		9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C237BD4168A5ED800605160 /* CDModelViewController.m */; };
 		9C2967DD175D7FAA00B9EB24 /* NSView+CDAutoLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DB175D7FAA00B9EB24 /* NSView+CDAutoLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9C2967DE175D7FAA00B9EB24 /* NSView+CDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967DC175D7FAA00B9EB24 /* NSView+CDAutoLayout.m */; };
-		9C2967E1175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
-		9C2967E2175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
 		9C2967E3175D808D00B9EB24 /* CDAutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */; };
 		9C2967E4175D808D00B9EB24 /* CDAutoLayoutHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */; };
 		9C2967E9175D81C700B9EB24 /* UIView+CDAutoLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C2967E6175D819900B9EB24 /* UIView+CDAutoLayout.m */; };
@@ -64,6 +62,8 @@
 		9CA93E731881F8E5008EBED8 /* NSBundle+CDSystemProperties.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CA93E701881F8E5008EBED8 /* NSBundle+CDSystemProperties.h */; };
 		9CA93E741881F8E5008EBED8 /* NSBundle+CDSystemProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA93E711881F8E5008EBED8 /* NSBundle+CDSystemProperties.m */; };
 		9CA93E751881F8E5008EBED8 /* NSBundle+CDSystemProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CA93E711881F8E5008EBED8 /* NSBundle+CDSystemProperties.m */; };
+		9CCAD91D1902AE7A008EE881 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
+		9CCAD91E1902AE7A008EE881 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
 		9CF8BBE6163EC93100F34638 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBE5163EC93100F34638 /* Cocoa.framework */; };
 		9CF8BBF0163EC93100F34638 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CF8BBEE163EC93100F34638 /* InfoPlist.strings */; };
 		9CF8BBFC163EC93200F34638 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBFB163EC93200F34638 /* SenTestingKit.framework */; };
@@ -210,9 +210,8 @@
 		9C237C36168C988F00605160 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				9CCAD91C1902AE6B008EE881 /* Private */,
 				9C76761A168FB9A500AF5B27 /* Categories */,
-				9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */,
-				9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */,
 				9C628037188443EB00B3904C /* CDDispatchBlock.h */,
 				9C628038188443EB00B3904C /* CDDispatchBlock.m */,
 				9C59C4E817500E4600D368B9 /* CDKittAttributes.h */,
@@ -386,6 +385,15 @@
 			name = Misc;
 			sourceTree = "<group>";
 		};
+		9CCAD91C1902AE6B008EE881 /* Private */ = {
+			isa = PBXGroup;
+			children = (
+				9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */,
+				9C2967E0175D808D00B9EB24 /* CDAutoLayoutHelper.m */,
+			);
+			name = Private;
+			sourceTree = "<group>";
+		};
 		9CF8BBD6163EC93100F34638 = {
 			isa = PBXGroup;
 			children = (
@@ -480,12 +488,12 @@
 				9C59C51C17501E3700D368B9 /* CDKittTypes.h in Headers */,
 				9CA93E6E1881F4A1008EBED8 /* CDStatusBarSize.h in Headers */,
 				9C62803A188443EB00B3904C /* CDDispatchBlock.h in Headers */,
+				9CCAD91E1902AE7A008EE881 /* CDAutoLayoutHelper.h in Headers */,
 				9C59C51D17501E3F00D368B9 /* UIImage+CDKitt.h in Headers */,
 				9C59C51E17501E3F00D368B9 /* UITextField+CDKitt.h in Headers */,
 				9C59C51F17501E4600D368B9 /* CDModelViewController.h in Headers */,
 				9C59C52017501E4F00D368B9 /* CDKitt.h in Headers */,
 				9C6C9C73175BFACA002BCFFD /* UIViewController+CDRequiresSuper.h in Headers */,
-				9C2967E2175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */,
 				9CA93E731881F8E5008EBED8 /* NSBundle+CDSystemProperties.h in Headers */,
 				9C2967EA175D81CE00B9EB24 /* UIView+CDAutoLayout.h in Headers */,
 			);
@@ -503,7 +511,7 @@
 				9C2967DD175D7FAA00B9EB24 /* NSView+CDAutoLayout.h in Headers */,
 				9C91D2EF1656B593002C6E62 /* CDKittTypes.h in Headers */,
 				9C59C4E917500E4600D368B9 /* CDKittAttributes.h in Headers */,
-				9C2967E1175D808D00B9EB24 /* CDAutoLayoutHelper.h in Headers */,
+				9CCAD91D1902AE7A008EE881 /* CDAutoLayoutHelper.h in Headers */,
 				9C628039188443EB00B3904C /* CDDispatchBlock.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
