@@ -6,21 +6,6 @@
 	objectVersion = 46;
 	objects = {
 
-/* Begin PBXAggregateTarget section */
-		9C696C28164F1CE000D12672 /* All */ = {
-			isa = PBXAggregateTarget;
-			buildConfigurationList = 9C696C29164F1CE000D12672 /* Build configuration list for PBXAggregateTarget "All" */;
-			buildPhases = (
-			);
-			dependencies = (
-				9C696C2D164F1CEE00D12672 /* PBXTargetDependency */,
-				9C696C2F164F1CEE00D12672 /* PBXTargetDependency */,
-			);
-			name = All;
-			productName = All;
-		};
-/* End PBXAggregateTarget section */
-
 /* Begin PBXBuildFile section */
 		9C1C0C73166AB27A00BAEC2D /* UITextField+CDKitt.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C1C0C72166AB27A00BAEC2D /* UITextField+CDKitt.m */; };
 		9C237BD5168A5ED800605160 /* CDModelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C237BD4168A5ED800605160 /* CDModelViewController.m */; };
@@ -66,7 +51,6 @@
 		9CCAD91E1902AE7A008EE881 /* CDAutoLayoutHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C2967DF175D808D00B9EB24 /* CDAutoLayoutHelper.h */; };
 		9CF8BBE6163EC93100F34638 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBE5163EC93100F34638 /* Cocoa.framework */; };
 		9CF8BBF0163EC93100F34638 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CF8BBEE163EC93100F34638 /* InfoPlist.strings */; };
-		9CF8BBFC163EC93200F34638 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBFB163EC93200F34638 /* SenTestingKit.framework */; };
 		9CF8BBFD163EC93200F34638 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBE5163EC93100F34638 /* Cocoa.framework */; };
 		9CF8BC00163EC93200F34638 /* CDKitt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CF8BBE2163EC93100F34638 /* CDKitt.framework */; };
 		9CF8BC06163EC93200F34638 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CF8BC04163EC93200F34638 /* InfoPlist.strings */; };
@@ -74,20 +58,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9C696C2C164F1CEE00D12672 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CF8BBD8163EC93100F34638 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9CF8BBE1163EC93100F34638;
-			remoteInfo = "CDKitt-Mac";
-		};
-		9C696C2E164F1CEE00D12672 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9CF8BBD8163EC93100F34638 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 9C1DE127164F1C0900120817;
-			remoteInfo = "CDKitt-iOS";
-		};
 		9CF8BBFE163EC93200F34638 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9CF8BBD8163EC93100F34638 /* Project object */;
@@ -167,8 +137,7 @@
 		9CF8BBEF163EC93100F34638 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CF8BBF1163EC93100F34638 /* CDKitt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CDKitt-Prefix.pch"; sourceTree = "<group>"; };
 		9CF8BBF2163EC93100F34638 /* CDKitt.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKitt.h; sourceTree = "<group>"; };
-		9CF8BBFA163EC93200F34638 /* CDKittTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDKittTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CF8BBFB163EC93200F34638 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		9CF8BBFA163EC93200F34638 /* CDKittTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CDKittTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CF8BC03163EC93200F34638 /* CDKittTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CDKittTests-Info.plist"; sourceTree = "<group>"; };
 		9CF8BC05163EC93200F34638 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9CF8BC07163EC93200F34638 /* CDKittTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CDKittTests.h; sourceTree = "<group>"; };
@@ -198,7 +167,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CF8BBFC163EC93200F34638 /* SenTestingKit.framework in Frameworks */,
 				9CF8BBFD163EC93200F34638 /* Cocoa.framework in Frameworks */,
 				9CF8BC00163EC93200F34638 /* CDKitt.framework in Frameworks */,
 			);
@@ -342,7 +310,6 @@
 			isa = PBXGroup;
 			children = (
 				9CF8BBE5163EC93100F34638 /* Cocoa.framework */,
-				9CF8BBFB163EC93200F34638 /* SenTestingKit.framework */,
 				9C1DE129164F1C0900120817 /* Foundation.framework */,
 				9C59C52117501EC400D368B9 /* QuartzCore.framework */,
 				9CF8BBE7163EC93100F34638 /* Other Frameworks */,
@@ -409,7 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				9CF8BBE2163EC93100F34638 /* CDKitt.framework */,
-				9CF8BBFA163EC93200F34638 /* CDKittTests.octest */,
+				9CF8BBFA163EC93200F34638 /* CDKittTests.xctest */,
 				9C1DE128164F1C0900120817 /* libCDKitt.a */,
 			);
 			name = Products;
@@ -571,8 +538,8 @@
 			);
 			name = CDKittTests;
 			productName = CDKittTests;
-			productReference = 9CF8BBFA163EC93200F34638 /* CDKittTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 9CF8BBFA163EC93200F34638 /* CDKittTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -597,10 +564,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C696C28164F1CE000D12672 /* All */,
 				9CF8BBE1163EC93100F34638 /* CDKitt-Mac */,
-				9CF8BBF9163EC93200F34638 /* CDKittTests */,
 				9C1DE127164F1C0900120817 /* CDKitt-iOS */,
+				9CF8BBF9163EC93200F34638 /* CDKittTests */,
 			);
 		};
 /* End PBXProject section */
@@ -681,16 +647,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9C696C2D164F1CEE00D12672 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9CF8BBE1163EC93100F34638 /* CDKitt-Mac */;
-			targetProxy = 9C696C2C164F1CEE00D12672 /* PBXContainerItemProxy */;
-		};
-		9C696C2F164F1CEE00D12672 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 9C1DE127164F1C0900120817 /* CDKitt-iOS */;
-			targetProxy = 9C696C2E164F1CEE00D12672 /* PBXContainerItemProxy */;
-		};
 		9CF8BBFF163EC93200F34638 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 9CF8BBE1163EC93100F34638 /* CDKitt-Mac */;
@@ -760,22 +716,6 @@
 				SKIP_INSTALL = YES;
 				USER_HEADER_SEARCH_PATHS = "Vendor/BlocksKit/BlocksKit/**";
 				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		9C696C2A164F1CE000D12672 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		9C696C2B164F1CE000D12672 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -909,12 +849,14 @@
 			baseConfigurationReference = 9C59C4D917500C3400D368B9 /* Test.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDKitt/CDKitt-Prefix.pch";
 				INFOPLIST_FILE = "CDKittTests/CDKittTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -923,12 +865,14 @@
 			baseConfigurationReference = 9C59C4D917500C3400D368B9 /* Test.xcconfig */;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "CDKitt/CDKitt-Prefix.pch";
 				INFOPLIST_FILE = "CDKittTests/CDKittTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -940,15 +884,6 @@
 			buildConfigurations = (
 				9C1DE132164F1C0900120817 /* Debug */,
 				9C1DE133164F1C0900120817 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C696C29164F1CE000D12672 /* Build configuration list for PBXAggregateTarget "All" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				9C696C2A164F1CE000D12672 /* Debug */,
-				9C696C2B164F1CE000D12672 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
