@@ -26,23 +26,9 @@
 
 @implementation CDKittTests
 
-- (void)setUp
+- (void)testDummy
 {
-    [super setUp];
-    
-    // Set-up code here.
-}
-
-- (void)tearDown
-{
-    // Tear-down code here.
-    
-    [super tearDown];
-}
-
-- (void)testExample
-{
-    XCTFail(@"Unit tests are not implemented yet in CDKittTests");
+	XCTAssert(YES, @"Dummy test to assert that Travis-Ci integration works!");
 }
 
 @end
