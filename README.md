@@ -2,7 +2,8 @@
 	<img src="https://dl.dropboxusercontent.com/u/1337202/linked%20stuff/CDKitt/CDKitt-readme-banner.png" alt="CDKitt" title="CDKitt">
 </p>
 
-# CDKitt
+# CDKitt [![Build Status](https://travis-ci.org/rastersize/CDKitt.svg?branch=master)](https://travis-ci.org/rastersize/CDKitt)
+
 CDKitt is [my](http://aron.cedercrantz.com/) kit of shared Objective-C macros, functions and classes. There’s extensions to _Foundation_, _Cocoa Touch_ and regular _Cocoa_.
 
 **Please note that this is currently a place where I’ve dumped quite a lot of stuff. Thus the order is not aweseom but more pressingly the quality of the code might not be the worlds best.**
