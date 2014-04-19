@@ -36,9 +36,6 @@
 	#pragma mark - Generic Imports
 	#import <Availability.h>
 	@import Foundation;
-	#import <CDKitt/CDKittAttributes.h>
-	#import <CDKitt/CDKittMacros.h>
-
 
 	#pragma mark - iOS Specifics
 	#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
@@ -61,6 +58,9 @@
 
 		@import Cocoa;
 	#endif
+
+	#import <CDKitt/CDKittAttributes.h>
+	#import <CDKitt/CDKittMacros.h>
 #else
 	#error "This project requires Objective-C."
 #endif
