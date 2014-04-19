@@ -5,6 +5,10 @@
 # CDKitt
 CDKitt is [my](http://aron.cedercrantz.com/) kit of shared Objective-C macros, functions and classes. There’s extensions to _Foundation_, _Cocoa Touch_ and regular _Cocoa_.
 
+**Please note that this is currently a place where I’ve dumped quite a lot of stuff. Thus the order is not aweseom but more pressingly the quality of the code might not be the worlds best.**
+
+In other words; please do not look at me :)
+
 ## Usage
 1. Add CDKitt as a git submodule and bootstrap it.
 	1. `git submodule add https://github.com/rastersize/CDKitt.git External/CDKitt`
