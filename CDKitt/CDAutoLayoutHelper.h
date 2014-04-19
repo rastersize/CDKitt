@@ -22,7 +22,7 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 // SOFTWARE.
 
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 extern void CDAddFillingAutoresizedSubview(UIView *view, UIView *subview);

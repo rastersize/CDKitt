@@ -23,8 +23,9 @@
 // SOFTWARE.
 
 #import "UITextField+CDKitt.h"
-#import <objc/runtime.h>
-#import <QuartzCore/QuartzCore.h>
+
+@import ObjectiveC.runtime;
+@import QuartzCore;
 
 
 static void *kCDKittUITextFieldShouldDrawInnerShadow;

@@ -35,7 +35,7 @@
 
 	#pragma mark - Generic Imports
 	#import <Availability.h>
-	#import <Foundation/Foundation.h>
+	@import Foundation;
 	#import <CDKitt/CDKittAttributes.h>
 	#import <CDKitt/CDKittMacros.h>
 
@@ -48,7 +48,7 @@
 		#define CD_TARGET_IS_IOS 1
 		#define CD_TARGET_IS_OS_X 0
 
-		#import <UIKit/UIKit.h>
+		@import UIKit;
 
 
 	#pragma mark - OS X Specifics
@@ -59,7 +59,7 @@
 		#define CD_TARGET_IS_IOS 0
 		#define CD_TARGET_IS_OS_X 1
 
-		#import <Cocoa/Cocoa.h>
+		@import Cocoa;
 	#endif
 #else
 	#error "This project requires Objective-C."
