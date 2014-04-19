@@ -42,7 +42,7 @@
 CD_FIX_CATEGORY_BUG_QA1490(NSImage, CDKittImageDrawing);
 @implementation NSImage (CDKittImageDrawing)
 
-+ (NSCache *)drawingCache
++ (NSCache *)cd_drawingCache
 {
 	static NSCache *cache = nil;
 	static dispatch_once_t predicate;
@@ -54,13 +54,13 @@ CD_FIX_CATEGORY_BUG_QA1490(NSImage, CDKittImageDrawing);
 
 + (NSImage *)cd_imageWithIdentifier:(NSString *)identifier forSize:(NSSize)size flipped:(BOOL)flipped andDrawingBlock:(CDImageDrawingBlock)drawingBlock
 {
-	NSImage *image = [[self drawingCache] objectForKey:identifier];
+	NSImage *image = [[self cd_drawingCache] objectForKey:identifier];
 	if (image == nil){
 		image = [self imageWithSize:size flipped:flipped drawingHandler:^BOOL(NSRect dstRect) {
 			drawingBlock();
 			return YES;
 		}];
-		[[[self class] drawingCache] setObject:image forKey:identifier];
+		[[[self class] cd_drawingCache] setObject:image forKey:identifier];
 	}
 	return image;
 }
