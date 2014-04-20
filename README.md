@@ -1,5 +1,5 @@
 <p align="center" >
-	<img src="https://dl.dropboxusercontent.com/u/1337202/linked%20stuff/CDKitt/CDKitt-readme-banner.png" alt="CDKitt" title="CDKitt">
+	<img src="https://dl.dropboxusercontent.com/u/1337202/linked%20stuff/CDKitt/CDKitt-readme-banner-v2.png" alt="CDKitt" title="CDKitt" height="512px" wdith="512px">
 </p>
 
 # CDKitt [![Build Status](https://travis-ci.org/rastersize/CDKitt.svg?branch=master)](https://travis-ci.org/rastersize/CDKitt)
